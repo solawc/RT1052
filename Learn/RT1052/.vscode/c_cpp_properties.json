@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "name": "RT1052",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/Keil_v5/ARM/ARMCC/include",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/CMSIS/Include",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/cmsis_drivers",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/hardware",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/hardware/lcd",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/hardware/font",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities/str",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities/log",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities/io",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/drivers",
+                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/User"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__CC_ARM",
+                "CPU_MIMXRT1052DVL6B",
+                "XIP_EXTERNAL_FLASH=1",
+                "XIP_BOOT_HEADER_ENABLE=1",
+                "XIP_BOOT_HEADER_DCD_ENABLE=1",
+                "PRINTF_FLOAT_ENABLE=1",
+                "SCANF_FLOAT_ENABLE=1",
+                "PRINTF_ADVANCED_ENABLE=1",
+                "SCANF_ADVANCED_ENABLE=1"
+            ],
+            "compilerPath": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++98",
+            "intelliSenseMode": "clang-x64" 
+        }
+    ],
+    "version": 4
+}
