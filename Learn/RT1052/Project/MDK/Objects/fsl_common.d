@@ -5,6 +5,7 @@
 .\objects\fsl_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\fsl_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\fsl_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\fsl_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\fsl_common.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h
 .\objects\fsl_common.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h
 .\objects\fsl_common.o: ..\..\Libraries\CMSIS\Include\core_cm7.h
@@ -27,5 +28,6 @@
 .\objects\fsl_common.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\fsl_common.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\fsl_common.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\fsl_common.o: ..\..\Libraries\hardware\adc.h
 .\objects\fsl_common.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\fsl_common.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

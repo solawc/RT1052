@@ -6,6 +6,7 @@
 .\objects\bsp_lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\bsp_lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\bsp_lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\bsp_lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\bsp_lcd.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h
 .\objects\bsp_lcd.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h
 .\objects\bsp_lcd.o: ..\..\Libraries\CMSIS\Include\core_cm7.h
@@ -28,6 +29,7 @@
 .\objects\bsp_lcd.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\bsp_lcd.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\bsp_lcd.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\bsp_lcd.o: ..\..\Libraries\hardware\adc.h
 .\objects\bsp_lcd.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\bsp_lcd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\bsp_lcd.o: ..\..\Libraries\drivers\fsl_elcdif.h

@@ -6,6 +6,7 @@
 .\objects\pit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\pit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\pit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\pit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\pit.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h
 .\objects\pit.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h
 .\objects\pit.o: ..\..\Libraries\CMSIS\Include\core_cm7.h
@@ -27,6 +28,7 @@
 .\objects\pit.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\pit.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\pit.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\pit.o: ..\..\Libraries\hardware\adc.h
 .\objects\pit.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\pit.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\pit.o: ..\..\Libraries\drivers\fsl_pit.h

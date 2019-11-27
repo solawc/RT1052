@@ -1,10 +1,10 @@
 /***********************************************************************
 *@Author: sola
 *@Date: 2019-11-16 19:58:35
-*@FilePath: \RT1052\User\main.c
+*@FilePath: \RT1052\User\main.c 
 *@Drscription: 
 ***********************************************************************/
-
+ 
 #include "board.h"
 #include "pin_mux.h"
 #include "clock_config.h"
@@ -38,19 +38,28 @@ int main(void)
     PRINTF("KEY init succeed\n");
     I2C_Init();
     PRINTF("I2C init succeed\n");
-    
+
     LCD_Init(LCD_INTERRUPT_DISABLE);
-    LCD_Clear(CL_GREEN);
-    LCD_SetFont(&Font16x32);
+    LCD_Clear(CL_RED);
+    LCD_SetFont(&Font8x16);
     LCD_SetColors(CL_WHITE,CL_RED);
-    LCD_DisplayStringLine(LINE(0),(uint8_t *)"Good");
-    LCD_DisplayStringLine(LINE(1),(uint8_t *)"Very Good");
-    LCD_DisplayStringLine(LINE(2),(uint8_t *)"Very Very Good");
     
-    
+    LCD_DisplayStringLine(LINE(0),(uint8_t *)"Systick init succeed");delay_ms(500);
+    LCD_DisplayStringLine(LINE(1),(uint8_t *)"LED init succeed");delay_ms(500);
+    LCD_DisplayStringLine(LINE(2),(uint8_t *)"KEY init succeed");delay_ms(500);
+    LCD_DisplayStringLine(LINE(3),(uint8_t *)"I2C init succeed");delay_ms(500);
+    LCD_DisplayStringLine(LINE(4),(uint8_t *)"ADC init succeed");delay_ms(500);
+
+
+    uint16_t x_point = 100;
     while(1)
-    {
-        
+    {   
+        LCD_DispString(0, 500, (uint8_t *)adc_dis);
+        LCD_DrawRect(x_point,200,100,100);
+        LCD_DispString(x_point+50-16, 200+50-8, "KEY1" );
+
+        LCD_DrawRect(x_point+200,200,100,100);
+        LCD_DispString(x_point+200+50-16, 200+50-8, "KEY2" );
     }			
 }
 
@@ -83,7 +92,7 @@ void Print_Log(void)
 *@Date: 2019-11-19 23:31:50
 *@Drscription: 
 ***********************************************************************/
-void Board_Config(void)
+void Board_Config(void) 
 {
     BOARD_ConfigMPU();
     BOARD_InitPins();

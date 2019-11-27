@@ -40,6 +40,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #if defined(__ICCARM__)
 #include <stddef.h>
@@ -54,7 +55,7 @@
 #include "pit.h"
 #include "i2c.h"
 #include "bsp_lcd.h"
-
+#include "adc.h"
 
 /*!
  * @addtogroup ksdk_common

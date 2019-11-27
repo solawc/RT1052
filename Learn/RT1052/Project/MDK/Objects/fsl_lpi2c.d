@@ -16,6 +16,7 @@
 .\objects\fsl_lpi2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\objects\fsl_lpi2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\fsl_lpi2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\fsl_lpi2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\fsl_lpi2c.o: ..\..\Libraries\hardware\led.h
 .\objects\fsl_lpi2c.o: ..\..\Libraries\drivers\fsl_common.h
 .\objects\fsl_lpi2c.o: ..\..\Libraries\drivers\fsl_iomuxc.h
@@ -29,5 +30,6 @@
 .\objects\fsl_lpi2c.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\fsl_lpi2c.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\fsl_lpi2c.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\fsl_lpi2c.o: ..\..\Libraries\hardware\adc.h
 .\objects\fsl_lpi2c.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\fsl_lpi2c.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h

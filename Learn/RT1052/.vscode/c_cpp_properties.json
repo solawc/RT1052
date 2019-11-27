@@ -5,18 +5,18 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "D:/Keil_v5/ARM/ARMCC/include",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/CMSIS/Include",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/cmsis_drivers",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/hardware",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/hardware/lcd",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/hardware/font",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities/str",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities/log",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/utilities/io",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/Libraries/drivers",
-                "C:/Users/sola/Desktop/RT1052/Learn/RT1052/User"
+                "${workspaceFolder}/**Libraries/CMSIS/Include",
+                "${workspaceFolder}/**Libraries/cmsis_drivers",
+                "${workspaceFolder}/**Libraries/hardware",
+                "${workspaceFolder}/**Libraries/hardware/lcd",
+                "${workspaceFolder}/**Libraries/hardware/font",
+                "${workspaceFolder}/**Libraries/utilities",
+                "${workspaceFolder}/**Libraries/utilities/str",
+                "${workspaceFolder}/**Libraries/utilities/log",
+                "${workspaceFolder}/**Libraries/utilities/io",
+                "${workspaceFolder}/**Libraries",
+                "${workspaceFolder}/**Libraries/drivers",
+                "${workspaceFolder}/**User"
             ],
             "defines": [
                 "_DEBUG",
@@ -32,10 +32,10 @@
                 "PRINTF_ADVANCED_ENABLE=1",
                 "SCANF_ADVANCED_ENABLE=1"
             ],
-            "compilerPath": "C:\\Program Files\\LLVM\\bin\\clang.exe",
+            "compilerPath": "\"C:\\Program Files\\LLVM\\bin\\clang.exe\"",
             "cStandard": "c11",
             "cppStandard": "c++98",
-            "intelliSenseMode": "clang-x64" 
+            "intelliSenseMode": "clang-x64"
         }
     ],
     "version": 4

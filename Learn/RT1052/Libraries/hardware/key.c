@@ -65,17 +65,17 @@ void key_init(void)
     
     /*设置IO复用*/
     IOMUXC_SetPinMux(K1_MUX,0u);
-    
+    IOMUXC_SetPinMux(K2_MUX,0u);
     /*配置GOIO PAD*/
     IOMUXC_SetPinConfig(K1_MUX,KEY_PAD_CONFIG_DATA);
-    
+    IOMUXC_SetPinConfig(K2_MUX,KEY_PAD_CONFIG_DATA);
     /*配置GPIO 模式*/
     KEY_Config.direction = kGPIO_DigitalInput;      //配置为输入模式
     KEY_Config.outputLogic = 1u;                    //此配置在输入时无效 
     KEY_Config.interruptMode = kGPIO_NoIntmode;     //不使用中断 
     //KEY_Config.interruptMode = kGPIO_IntLowLevel;   //低电平触发中断
     GPIO_PinInit(K1_PORT,K1_PIN,&KEY_Config);
-    
+    GPIO_PinInit(K2_PORT,K2_PIN,&KEY_Config);
     //key_it_config();                                //中断配置
 } 
 
@@ -91,12 +91,13 @@ uint8_t key_scanf(void)
 {
     static uint8_t key_status=1;
 
-    if(key_status && (K1_READ==0) )
+    if(key_status && ((K1_READ==0) ||(K2_READ==0)))
     {
         key_status = 0;
         if(K1_READ==0) return 1;
+        else if (K2_READ==0) return 2;
     }
-    else if(K1_READ==1)
+    else if ((K1_READ==1) && (K2_READ==1))
     {
         key_status = 1;
     }

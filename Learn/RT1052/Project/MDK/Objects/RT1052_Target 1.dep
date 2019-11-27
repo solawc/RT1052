@@ -12,12 +12,13 @@ I (..\..\Libraries\system_MIMXRT1052.h)(0x5AC901F8)
 I (..\..\Libraries\MIMXRT1052_features.h)(0x5AC901F8)
 F (.\startup_MIMXRT1052.s)(0x5AC901F8)(--cpu Cortex-M7.fp.dp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 528" --pd "CPU_MIMXRT1052DVL6B SETA 1" --pd "__STARTUP_INITIALIZE_NONCACHEDATA SETA 1"--list .\listings\startup_mimxrt1052.lst --xref -o .\objects\startup_mimxrt1052.o --depend .\objects\startup_mimxrt1052.d)
 F (..\..\Libraries\drivers\fsl_clock.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_clock.o --depend .\objects\fsl_clock.d)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -30,24 +31,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_gpio.c)(0x5DD3D8C5)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_gpio.o --depend .\objects\fsl_gpio.d)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -59,24 +62,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\system_MIMXRT
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_features.h)(0x5ABC318C)
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_lpuart.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_lpuart.o --depend .\objects\fsl_lpuart.d)
 I (..\..\Libraries\drivers\fsl_lpuart.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -89,23 +94,25 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_common.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_common.o --depend .\objects\fsl_common.d)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -118,24 +125,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_pit.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_pit.o --depend .\objects\fsl_pit.d)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -148,14 +157,15 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_lpi2c.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_lpi2c.o --depend .\objects\fsl_lpi2c.d)
 I (..\..\Libraries\drivers\fsl_lpi2c.h)(0x5AC901F8)
@@ -170,32 +180,35 @@ I (..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x5AC901F8)
 I (..\..\Libraries\CMSIS\Include\mpu_armv7.h)(0x5AC901F8)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\system_MIMXRT1052.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_features.h)(0x5ABC318C)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_pxp.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_pxp.o --depend .\objects\fsl_pxp.d)
 I (..\..\Libraries\drivers\fsl_pxp.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -208,24 +221,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\drivers\fsl_elcdif.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_elcdif.o --depend .\objects\fsl_elcdif.d)
 I (..\..\Libraries\drivers\fsl_elcdif.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -238,23 +253,57 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
+I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
+F (..\..\Libraries\drivers\fsl_adc.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_adc.o --depend .\objects\fsl_adc.d)
+I (..\..\Libraries\drivers\fsl_adc.h)(0x5AC901F8)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
+I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
+I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\mpu_armv7.h)(0x5AC901F8)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\system_MIMXRT1052.h)(0x5ABC318C)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_features.h)(0x5ABC318C)
+I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
+I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
+I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
+I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
+I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
+I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
+I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
+I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
+I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\utilities\fsl_assert.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_assert.o --depend .\objects\fsl_assert.d)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -267,25 +316,27 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
 F (..\..\Libraries\utilities\fsl_notifier.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_notifier.o --depend .\objects\fsl_notifier.d)
 I (..\..\Libraries\utilities\fsl_notifier.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -298,24 +349,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\utilities\fsl_shell.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_shell.o --depend .\objects\fsl_shell.d)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (..\..\Libraries\utilities\fsl_shell.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -328,15 +381,16 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\utilities\fsl_sbrk.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_sbrk.o --depend .\objects\fsl_sbrk.d)
 F (..\..\Libraries\utilities\fsl_debug_console.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_debug_console.o --depend .\objects\fsl_debug_console.d)
@@ -344,7 +398,7 @@ I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
@@ -361,15 +415,16 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console_conf.h)(0x5AC901F8)
 I (..\..\Libraries\utilities\log\fsl_log.h)(0x5AC901F8)
@@ -379,11 +434,12 @@ I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdarg.h)(0x5CEB79E4)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
 I (..\..\Libraries\utilities\str\fsl_str.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -396,25 +452,27 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console_conf.h)(0x5AC901F8)
 F (..\..\Libraries\utilities\log\fsl_log.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_log.o --depend .\objects\fsl_log.d)
 I (..\..\Libraries\utilities\log\fsl_log.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -427,26 +485,28 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console_conf.h)(0x5AC901F8)
 I (..\..\Libraries\utilities\io\fsl_io.h)(0x5AC901F8)
 F (..\..\Libraries\utilities\io\fsl_io.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_io.o --depend .\objects\fsl_io.d)
 I (..\..\Libraries\utilities\io\fsl_io.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -459,25 +519,27 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console_conf.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_lpuart.h)(0x5AC901F8)
 F (..\..\User\board.c)(0x5DD139B7)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\board.o --depend .\objects\board.d)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -490,27 +552,29 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
 I (..\..\User\board.h)(0x5D61601B)
 I (..\..\User\clock_config.h)(0x5ACC7765)
 F (..\..\User\clock_config.c)(0x5AE2A064)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\clock_config.o --depend .\objects\clock_config.d)
 I (..\..\User\clock_config.h)(0x5ACC7765)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -523,23 +587,25 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\User\pin_mux.c)(0x5AC901F8)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\pin_mux.o --depend .\objects\pin_mux.d)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -552,25 +618,27 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\User\pin_mux.h)(0x5AC901F8)
 F (..\..\Libraries\hardware\pit.c)(0x5DD13060)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\pit.o --depend .\objects\pit.d)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -583,24 +651,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
 F (..\..\Libraries\hardware\led.c)(0x5DD118E0)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\led.o --depend .\objects\led.d)
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -610,26 +680,28 @@ I (..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x5AC901F8)
 I (..\..\Libraries\CMSIS\Include\mpu_armv7.h)(0x5AC901F8)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\system_MIMXRT1052.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_features.h)(0x5ABC318C)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
-F (..\..\Libraries\hardware\key.c)(0x5DD124CC)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\key.o --depend .\objects\key.d)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+F (..\..\Libraries\hardware\key.c)(0x5DD57307)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\key.o --depend .\objects\key.d)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -644,21 +716,23 @@ I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\hardware\systick.c)(0x5DD3D2DA)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\systick.o --depend .\objects\systick.d)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -671,24 +745,26 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
 F (..\..\Libraries\hardware\nvic.c)(0x5DD118E5)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\nvic.o --depend .\objects\nvic.d)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -701,23 +777,25 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\Libraries\hardware\i2c.c)(0x5DD3DD8B)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\i2c.o --depend .\objects\i2c.d)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -730,25 +808,27 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\drivers\fsl_lpi2c.h)(0x5AC901F8)
 I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5CEB79E2)
 F (..\..\Libraries\hardware\lcd\bsp_lcd.c)(0x5DD406AE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\bsp_lcd.o --depend .\objects\bsp_lcd.d)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -760,15 +840,16 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\system_MIMXRT
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_features.h)(0x5ABC318C)
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\Libraries\drivers\fsl_elcdif.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_pxp.h)(0x5AC901F8)
@@ -776,15 +857,15 @@ I (..\..\Libraries\hardware\lcd\pad_config.h)(0x5D902CD0)
 F (..\..\Libraries\hardware\font\fonts.c)(0x5D902CCE)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fonts.o --depend .\objects\fonts.d)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
-F (..\..\User\main.c)(0x5DD40F38)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\main.o --depend .\objects\main.d)
-I (..\..\User\board.h)(0x5D61601B)
-I (..\..\User\clock_config.h)(0x5ACC7765)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+F (..\..\Libraries\hardware\adc.c)(0x5DD7D924)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\adc.o --depend .\objects\adc.d)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -797,15 +878,51 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
+I (..\..\Libraries\drivers\fsl_adc.h)(0x5AC901F8)
+I (..\..\Libraries\utilities\io\fsl_io.h)(0x5AC901F8)
+I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
+F (..\..\User\main.c)(0x5DD7DB11)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\main.o --depend .\objects\main.d)
+I (..\..\User\board.h)(0x5D61601B)
+I (..\..\User\clock_config.h)(0x5ACC7765)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
+I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
+I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\cmsis_version.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\cmsis_compiler.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\cmsis_armcc.h)(0x5AC901F8)
+I (..\..\Libraries\CMSIS\Include\mpu_armv7.h)(0x5AC901F8)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\system_MIMXRT1052.h)(0x5ABC318C)
+I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_features.h)(0x5ABC318C)
+I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
+I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
+I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
+I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
+I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
+I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
+I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
+I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
+I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 I (..\..\User\pin_mux.h)(0x5AC901F8)
 I (..\..\Libraries\utilities\fsl_debug_console.h)(0x5AC901F8)
@@ -816,10 +933,11 @@ F (..\..\User\xip\fire_imxrt1052_spiflash_config.c)(0x5AD84604)(--c99 -c --cpu C
 I (..\..\User\xip\fire_imxrt1052_spiflash_config.h)(0x5AE28971)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -832,26 +950,28 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)
 F (..\..\User\xip\fsl_flexspi_nor_boot.c)(0x5AD84A80)(--c99 -c --cpu Cortex-M7.fp.dp -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\drivers -I ..\..\Libraries\utilities -I ..\..\Libraries\utilities\io -I ..\..\Libraries\utilities\log -I ..\..\Libraries\utilities\str -I ..\..\User\xip -I ..\..\User\bsp -I ..\..\User -I ..\..\Libraries\hardware -I ..\..\Libraries\hardware\lcd -I ..\..\Libraries\hardware\font --library_interface=armcc --library_type=standardlib --diag_suppress=66,1296,186-I.\RTE\_Target_1-ID:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="528" -DCPU_MIMXRT1052DVL6B -DCPU_MIMXRT1052DVL6B -DXIP_EXTERNAL_FLASH="1" -DXIP_BOOT_HEADER_ENABLE="1" -DXIP_BOOT_HEADER_DCD_ENABLE="1" -DPRINTF_FLOAT_ENABLE="1" -DSCANF_FLOAT_ENABLE="1" -DPRINTF_ADVANCED_ENABLE="1" -DSCANF_ADVANCED_ENABLE="1"-o .\objects\fsl_flexspi_nor_boot.o --depend .\objects\fsl_flexspi_nor_boot.d)
 I (..\..\User\xip\fsl_flexspi_nor_boot.h)(0x5AE28987)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5CEB79E2)
 I (..\..\User\board.h)(0x5D61601B)
 I (..\..\User\clock_config.h)(0x5ACC7765)
-I (..\..\Libraries\drivers\fsl_common.h)(0x5DD407B9)
+I (..\..\Libraries\drivers\fsl_common.h)(0x5DD7DA4D)
 I (D:\Keil_v5\ARM\ARMCC\include\assert.h)(0x5CEB79D6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5CEB79DE)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x5CEB79E2)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5CEB79E2)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5CEB79E2)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h)(0x5ABC318C)
 I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h)(0x5ABC318C)
 I (..\..\Libraries\CMSIS\Include\core_cm7.h)(0x5AC901F8)
@@ -864,13 +984,14 @@ I (D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052_fe
 I (..\..\Libraries\hardware\led.h)(0x5D64D6F1)
 I (..\..\Libraries\drivers\fsl_iomuxc.h)(0x5AC901F8)
 I (..\..\Libraries\drivers\fsl_gpio.h)(0x5AC901F8)
-I (..\..\Libraries\hardware\key.h)(0x5DD11880)
+I (..\..\Libraries\hardware\key.h)(0x5DD572E5)
 I (..\..\Libraries\hardware\systick.h)(0x5D651B20)
 I (..\..\Libraries\hardware\nvic.h)(0x5DD118B2)
-I (..\..\Libraries\hardware\pit.h)(0x5DD031D9)
+I (..\..\Libraries\hardware\pit.h)(0x5DD54DFB)
 I (..\..\Libraries\drivers\fsl_pit.h)(0x5AC901F8)
 I (..\..\Libraries\hardware\i2c.h)(0x5DD3EDB7)
 I (..\..\Libraries\hardware\lcd\bsp_lcd.h)(0x5DD3FEBF)
 I (..\..\Libraries\hardware\font\fonts.h)(0x5D902CCE)
 I (..\..\Libraries\hardware\./font/fonts.h)(0x5D902CCE)
+I (..\..\Libraries\hardware\adc.h)(0x5DD7D932)
 I (..\..\Libraries\drivers\fsl_clock.h)(0x5DD0126F)

@@ -20,6 +20,11 @@
 #define K1_MUX          IOMUXC_SNVS_WAKEUP_GPIO5_IO00
 #define K1_READ         GPIO_PinRead(K1_PORT,K1_PIN)
 
+#define K2_PORT         GPIO1   
+#define K2_PIN          5u    
+#define K2_MUX          IOMUXC_GPIO_AD_B0_05_GPIO1_IO05
+#define K2_READ         GPIO_PinRead(K2_PORT,K2_PIN)
+
 typedef enum
 {
     Key_On,

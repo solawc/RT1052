@@ -30,6 +30,7 @@
 .\objects\fsl_debug_console.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\fsl_debug_console.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\fsl_debug_console.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\fsl_debug_console.o: ..\..\Libraries\hardware\adc.h
 .\objects\fsl_debug_console.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\fsl_debug_console.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\fsl_debug_console.o: ..\..\Libraries\utilities\fsl_debug_console_conf.h

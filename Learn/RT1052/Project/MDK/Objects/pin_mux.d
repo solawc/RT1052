@@ -5,6 +5,7 @@
 .\objects\pin_mux.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\pin_mux.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\pin_mux.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\pin_mux.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\pin_mux.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h
 .\objects\pin_mux.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h
 .\objects\pin_mux.o: ..\..\Libraries\CMSIS\Include\core_cm7.h
@@ -27,6 +28,7 @@
 .\objects\pin_mux.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\pin_mux.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\pin_mux.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\pin_mux.o: ..\..\Libraries\hardware\adc.h
 .\objects\pin_mux.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\pin_mux.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\pin_mux.o: ..\..\User\pin_mux.h

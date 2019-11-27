@@ -6,6 +6,7 @@
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\objects\systick.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\fsl_device_registers.h
 .\objects\systick.o: D:\Users\sola\AppData\Local\Arm\Packs\NXP\MIMXRT1052_DFP\10.0.1\MIMXRT1052.h
 .\objects\systick.o: ..\..\Libraries\CMSIS\Include\core_cm7.h
@@ -28,6 +29,7 @@
 .\objects\systick.o: ..\..\Libraries\hardware\lcd\bsp_lcd.h
 .\objects\systick.o: ..\..\Libraries\hardware\font\fonts.h
 .\objects\systick.o: ..\..\Libraries\hardware\./font/fonts.h
+.\objects\systick.o: ..\..\Libraries\hardware\adc.h
 .\objects\systick.o: ..\..\Libraries\drivers\fsl_clock.h
 .\objects\systick.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 .\objects\systick.o: ..\..\Libraries\utilities\fsl_debug_console.h

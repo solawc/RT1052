@@ -443,6 +443,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\drivers\fsl_elcdif.c</FilePath>
             </File>
+            <File>
+              <FileName>fsl_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\drivers\fsl_adc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -552,6 +557,11 @@
               <FileName>fonts.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\Libraries\hardware\font\fonts.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Libraries\hardware\adc.c</FilePath>
             </File>
           </Files>
         </Group>
