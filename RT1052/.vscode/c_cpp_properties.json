@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "RT1052",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "D:/Keil_v5/ARM/ARMCC/include",
+                "E:/Github/**"
+               
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "__CC_ARM",
+                "CPU_MIMXRT1052DVL6B",
+                "XIP_EXTERNAL_FLASH=1",
+                "XIP_BOOT_HEADER_ENABLE=1",
+                "XIP_BOOT_HEADER_DCD_ENABLE=1",
+                "PRINTF_FLOAT_ENABLE=1",
+                "SCANF_FLOAT_ENABLE=1",
+                "PRINTF_ADVANCED_ENABLE=1",
+                "SCANF_ADVANCED_ENABLE=1"
+            ],
+            "compilerPath": "\"C:\\Program Files\\LLVM\\bin\\clang.exe\"",
+            "cStandard": "c11",
+            "cppStandard": "c++98",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
