@@ -1,3 +1,9 @@
+/*
+*@Date: 2020-03-15 02:33:54
+*@LastEditors: SOLA
+*@LastEditTime: 2020-03-20 01:33:19
+*@FilePath: \RT1052\Libraries\hardware\led.h
+*/
 #ifndef __led_h
 #define __led_h
 
@@ -16,10 +22,10 @@
 #define LED_G_PIN       25U         //GPIO_AD_B1_09
 #define LED_B_PIN       10U         //GPIO_AD_B0_10
 
-
 #define LED_R_MUX       IOMUXC_GPIO_AD_B1_08_GPIO1_IO24
 #define LED_G_MUX       IOMUXC_GPIO_AD_B1_09_GPIO1_IO25
 #define LED_B_MUX       IOMUXC_GPIO_AD_B0_10_GPIO1_IO10
+
 
 void led_init(void);
 void led_on(uint32_t LED_X_PIN);

@@ -19,25 +19,13 @@
                                         IOMUXC_SW_PAD_CTL_PAD_PUS(0) | \
                                         IOMUXC_SW_PAD_CTL_PAD_HYS(0))
 
-
-
-/***********************************************************************
+/*
+*@Date: 2020-03-18 03:01:35
 *@Function: 
 *@Input: 
-*@Return: none
-*@Author: sola
-*@Date: 2019-11-17 17:53:18
+*@Return: 
 *@Drscription: 
-***********************************************************************/
-
-/***********************************************************************
-*@Function: 
-*@Input: 
-*@Return: none
-*@Author: sola
-*@Date: 2019-11-22 00:43:50
-*@Drscription: 
-***********************************************************************/
+*/
 bool Adc_Init(void)
 {
     gpio_pin_config_t Config;
@@ -49,10 +37,11 @@ bool Adc_Init(void)
     Config.outputLogic = 0u;
     GPIO_PinInit(ADC_GPIO, ADC_PIN, &Config);
 
+    IOMUXC_SetPinMux(ADC_MUX,0);
+    IOMUXC_SetPinConfig(ADC_MUX,ADC_PAD_CONFIG_DATA);
 
     ADC_GetDefaultConfig(&config);
     ADC_Init(ADCx, &config);
-
     ADC_SetHardwareAverageConfig(ADCx,kADC_HardwareAverageCount32);
 
     ADC_CH_config.channelNumber = ADC_Channel;
@@ -61,11 +50,11 @@ bool Adc_Init(void)
 
     if(ADC_DoAutoCalibration(ADCx)==kStatus_Success)
     {
-        PRINTF("校正完成\n");
+      
     }
     else
     {
-        PRINTF("校正失败\n");
+       
     }
 
     return  true;
@@ -80,6 +69,11 @@ bool Adc_Init(void)
 *@Drscription: 
 ***********************************************************************/
 uint32_t ADC_Get(void)
-{
-    return ADC_GetChannelConversionValue(ADCx,ADC_Channel);
+{   
+    adc_channel_config_t adcChannelConfigStruct;
+    adcChannelConfigStruct.channelNumber = ADC_Channel;
+    adcChannelConfigStruct.enableInterruptOnConversionCompleted = true;
+    ADC_SetChannelConfig(ADCx, ADC_GROUP, &adcChannelConfigStruct);
+    
+    return ADC_GetChannelConversionValue(ADCx,ADC_GROUP);
 }

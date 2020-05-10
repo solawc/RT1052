@@ -41,6 +41,8 @@ int main(void)
     PRINTF("KEY init succeed\n");
     I2C_Init();
     PRINTF("I2C init succeed\n");
+    Adc_Init();
+    PRINTF("ADC init succeed\n");
 
     LCD_Init(LCD_INTERRUPT_DISABLE);
     LCD_Clear(CL_RED);
@@ -53,9 +55,15 @@ int main(void)
     LCD_DisplayStringLine(LINE(3),(uint8_t *)"I2C init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(4),(uint8_t *)"ADC init succeed");delay_ms(500);
 
+    uint32_t adc_collect = 0;
+
     while(1)
     {   
-			
+		adc_collect = ADC_Get();
+	
+        PRINTF("adc = %d\n",adc_collect);
+        
+        delay_ms(500);
     }			
 }
 

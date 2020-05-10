@@ -4,9 +4,8 @@
             "name": "RT1052",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:/Keil_v5/ARM/ARMCC/include",
-                "E:/Github/**"
-               
+                "D:\\Keil_v5\\ARM\\ARMCC\\include/**",
+                "E:\\GitHub\\RT1052\\RT1052/**"
             ],
             "defines": [
                 "_DEBUG",
