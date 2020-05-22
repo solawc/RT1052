@@ -20,7 +20,7 @@
                 "PRINTF_ADVANCED_ENABLE=1",
                 "SCANF_ADVANCED_ENABLE=1"
             ],
-            "compilerPath": "\"C:\\Program Files\\LLVM\\bin\\clang.exe\"",
+            "compilerPath": "",
             "cStandard": "c11",
             "cppStandard": "c++98",
             "intelliSenseMode": "clang-x64"

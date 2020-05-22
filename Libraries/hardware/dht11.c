@@ -4,6 +4,17 @@
 
 DHT11_Data_TypeDef DHT11_Data;
 
+
+#define DHT11_PAD_CONFIG_DATA          (IOMUXC_SW_PAD_CTL_PAD_SRE(0) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_DSE(6) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_SPEED(2) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_ODE(0) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_PKE(0) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_PUE(0) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_PUS(0) | \
+                                        IOMUXC_SW_PAD_CTL_PAD_HYS(0))
+
+
 /****************************************************************
 *@function: dht11_gpio_init
 *@input   : none
@@ -13,13 +24,17 @@ DHT11_Data_TypeDef DHT11_Data;
 ****************************************************************/
 void dht11_gpio_init(void)
 { 
-//    __DHT11_PIN_CLK();               //¿ªÆôÊ±ÖÓ
-//    
-//    DHT11_GPIO_Init.Mode = GPIO_MODE_OUTPUT_PP;
-//    DHT11_GPIO_Init.Pin = DHT11_PIN;
-//    DHT11_GPIO_Init.Pull = GPIO_NOPULL;
-//    DHT11_GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-//    HAL_GPIO_Init(DHT11_PORT, &DHT11_GPIO_Init);
+	gpio_pin_config_t dht11_Config;
+
+	IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_09_GPIO1_IO25,0);
+	IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_09_GPIO1_IO25,
+						DHT11_PAD_CONFIG_DATA);
+	
+
+	dht11_Config.direction = kGPIO_DigitalOutput;
+	dht11_Config.interruptMode = kGPIO_NoIntmode;
+	dht11_Config.outputLogic = 0U;
+	GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
 }
 
 /****************************************************************
@@ -47,6 +62,21 @@ void DHT11_MODE(uint8_t mode)
 //        DHT11_GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 //        HAL_GPIO_Init(DHT11_PORT, &DHT11_GPIO_Init);
 //    }
+	gpio_pin_config_t dht11_Config;
+
+	if(mode == 0)
+	{
+		dht11_Config.direction = kGPIO_DigitalInput;
+		dht11_Config.interruptMode = kGPIO_NoIntmode;
+		GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
+	}
+	else if(mdoe == 1)
+	{
+		dht11_Config.direction = kGPIO_DigitalOutput;
+		dht11_Config.interruptMode = kGPIO_NoIntmode;
+		dht11_Config.outputLogic = 0U;
+		GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
+	}
 }
 
 
@@ -107,7 +137,7 @@ uint8_t ReadByte(void) {
 		}
 	}	
 	return temp;
-}
+} 
 
 /****************************************************************
 *@function: Read_DHT11

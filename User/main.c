@@ -43,6 +43,10 @@ int main(void)
     DEBUG_PRINT("I2C init succeed");
     Adc_Init();
     DEBUG_PRINT("ADC init succeed");
+    Pit_init(0,1000);
+    DEBUG_PRINT("PIT init succeed,Set 1000ms");
+    
+
 
     LCD_Init(LCD_INTERRUPT_DISABLE);
     LCD_Clear(CL_RED);
