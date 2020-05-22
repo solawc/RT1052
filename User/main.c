@@ -15,7 +15,7 @@
 #include "systick.h"
 #include "fsl_debug_console.h"
 #include "fsl_common.h"
-
+#include "main.h"
 
 void Print_Log(void);
 void Board_Config(void);
@@ -34,15 +34,15 @@ int main(void)
     Print_Log();
 
     SysTick_Config(528000000/1000000);
-    PRINTF("Systick init succeed\n");
+    DEBUG_PRINT("Systick init succeed");
     led_init();
-    PRINTF("LED init succeed\n");
+    DEBUG_PRINT("LED init succeed");
     key_init();
-    PRINTF("KEY init succeed\n");
+    DEBUG_PRINT("KEY init succeed");
     I2C_Init();
-    PRINTF("I2C init succeed\n");
+    DEBUG_PRINT("I2C init succeed");
     Adc_Init();
-    PRINTF("ADC init succeed\n");
+    DEBUG_PRINT("ADC init succeed");
 
     LCD_Init(LCD_INTERRUPT_DISABLE);
     LCD_Clear(CL_RED);
@@ -60,9 +60,7 @@ int main(void)
     while(1)
     {   
 		adc_collect = ADC_Get();
-	
-        PRINTF("adc = %d\n",adc_collect);
-        
+        DEBUG_PRINT("adc = %d",adc_collect);
         delay_ms(500);
     }			
 }
@@ -77,15 +75,15 @@ int main(void)
 ***********************************************************************/
 void Print_Log(void)
 {
-    PRINTF("\r\n");
-    PRINTF("CPU:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_CpuClk));
-    PRINTF("AHB:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_AhbClk));
-    PRINTF("SEMC:            %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SemcClk));
-    PRINTF("SYSPLL:          %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllClk));
-    PRINTF("SYSPLLPFD0:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd0Clk));
-    PRINTF("SYSPLLPFD1:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
-    PRINTF("SYSPLLPFD2:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
-    PRINTF("SYSPLLPFD3:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));	
+    DEBUG_PRINT("\r\n");
+    DEBUG_PRINT("CPU:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_CpuClk));
+    DEBUG_PRINT("AHB:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_AhbClk));
+    DEBUG_PRINT("SEMC:            %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SemcClk));
+    DEBUG_PRINT("SYSPLL:          %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllClk));
+    DEBUG_PRINT("SYSPLLPFD0:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd0Clk));
+    DEBUG_PRINT("SYSPLLPFD1:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
+    DEBUG_PRINT("SYSPLLPFD2:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
+    DEBUG_PRINT("SYSPLLPFD3:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));	
 }
 
 /***********************************************************************
