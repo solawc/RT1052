@@ -1,3 +1,9 @@
+/***********************************************************************
+*@Date: 2020-05-22 02:12:37
+*@LastEditors: SOLA
+*@LastEditTime: 2020-05-24 17:47:03
+*@FilePath: \RT1052\Libraries\hardware\led.h
+***********************************************************************/
 /*
 *@Date: 2020-03-15 02:33:54
 *@LastEditors: SOLA
@@ -31,5 +37,4 @@ void led_init(void);
 void led_on(uint32_t LED_X_PIN);
 void led_off(uint32_t LED_X_PIN);
 void led_toggle(uint32_t LED_X_PIN);
-
 #endif

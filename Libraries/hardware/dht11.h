@@ -1,7 +1,7 @@
 /***********************************************************************
 *@Date: 2020-05-22 04:47:09
 *@LastEditors: SOLA
-*@LastEditTime: 2020-05-22 13:11:35
+*@LastEditTime: 2020-05-24 18:05:57
 *@FilePath: \RT1052\Libraries\hardware\dht11.h
 ***********************************************************************/
 #ifndef __dht11_h
@@ -20,16 +20,16 @@
 
 /*硬件接口*/
 #define __DHT11_PIN_CLK()       
-#define DHT11_PIN              	25U 
-#define DHT11_PORT              GPIO2
+#define DHT11_PIN              	27U 
+#define DHT11_PORT              GPIO1
 
 /*延时函数*/
 #define  SYSCLK                             600000000/1000000                   //指明CPU工作频率为(SystemCoreClock/1000000)MHz
 #define  A                                  12                                   //一次循环所花的周期数
-#define  B                                  3                                   //调用、初始化、返回总共所用的周期数
+#define  B                                  2                                   //调用、初始化、返回总共所用的周期数
 #define  delay_us(nus)                      wait(((nus)*(SYSCLK)-(B))/(A))
-#define  delay_ms(nms)                      delay_us((nms)*1000)
-#define  delay_s(ns)                        delay_ms((ns)*1000)
+// #define  delay_ms(nms)                      delay_us((nms)*1000)
+// #define  delay_s(ns)                        delay_ms((ns)*1000)
 
 /*结构体成员定义*/
 typedef struct

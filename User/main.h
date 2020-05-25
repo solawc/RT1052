@@ -1,14 +1,14 @@
 /***********************************************************************
 *@Date: 2020-05-22 02:22:45
 *@LastEditors: SOLA
-*@LastEditTime: 2020-05-22 02:32:20
+*@LastEditTime: 2020-05-22 13:45:16
 *@FilePath: \RT1052\User\main.h
 ***********************************************************************/
 #ifndef __main_h
 #define __main_h
 
 #include "board.h"
-
+#include "dht11.h"
 
 #define SUCCESS								1
 #define ERROR								0

@@ -22,8 +22,6 @@
                                         IOMUXC_SW_PAD_CTL_PAD_PUS(0) | \
                                         IOMUXC_SW_PAD_CTL_PAD_HYS(0))
 
-
-
 /***********************************************************************
 *@Function: 
 *@Input: 
@@ -51,7 +49,8 @@ static void led_gpio_mux_config(void)     //…Ë÷√GPIO∏¥”√
 ***********************************************************************/    
 static void led_gpio_pad_config(void)   //…Ë÷√GPIO PAD
 {
-    IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B0_09_GPIO1_IO09,LED_PAD_CONFIG_DATA);
+    IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B0_09_GPIO1_IO09,
+                        LED_PAD_CONFIG_DATA);
     
     IOMUXC_SetPinConfig(LED_R_MUX,LED_PAD_CONFIG_DATA);
     IOMUXC_SetPinConfig(LED_G_MUX,LED_PAD_CONFIG_DATA);
@@ -122,9 +121,18 @@ void led_off(uint32_t LED_X_PIN)
     GPIO_PinWrite(LED_R_PORT,LED_X_PIN,1U);
 }
 
+/***********************************************************************
+*@Date: 2020-05-22 14:03:29
+*@Function: 
+*@Input: 
+*@Return: 
+*@Drscription: 
+***********************************************************************/
 void led_toggle(uint32_t LED_X_PIN)
 {
-    GPIO_PinWrite(LED_R_PORT,LED_X_PIN,(1 - GPIO_PinRead(LED_R_PORT, LED_X_PIN)));
+    GPIO_PinWrite(LED_R_PORT,LED_X_PIN,
+                 (1 - GPIO_PinRead(LED_R_PORT, 
+                                   LED_X_PIN)));
 }
 
 

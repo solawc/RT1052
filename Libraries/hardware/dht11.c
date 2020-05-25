@@ -14,7 +14,6 @@ DHT11_Data_TypeDef DHT11_Data;
                                         IOMUXC_SW_PAD_CTL_PAD_PUS(0) | \
                                         IOMUXC_SW_PAD_CTL_PAD_HYS(0))
 
-
 /****************************************************************
 *@function: dht11_gpio_init
 *@input   : none
@@ -27,10 +26,7 @@ void dht11_gpio_init(void)
 	gpio_pin_config_t dht11_Config;
 
 	IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B1_09_GPIO1_IO25,0);
-	IOMUXC_SetPinConfig(IOMUXC_GPIO_AD_B1_09_GPIO1_IO25,
-						DHT11_PAD_CONFIG_DATA);
 	
-
 	dht11_Config.direction = kGPIO_DigitalOutput;
 	dht11_Config.interruptMode = kGPIO_NoIntmode;
 	dht11_Config.outputLogic = 0U;
@@ -46,35 +42,16 @@ void dht11_gpio_init(void)
 ****************************************************************/
 void DHT11_MODE(uint8_t mode)
 {
-//    if(mode == 0)
-//    {
-//        DHT11_GPIO_Init.Mode = GPIO_MODE_INPUT;
-//        DHT11_GPIO_Init.Pin = DHT11_PIN;
-//        DHT11_GPIO_Init.Pull = GPIO_NOPULL;
-//        DHT11_GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-//        HAL_GPIO_Init(DHT11_PORT, &DHT11_GPIO_Init);
-//    }
-//    else if(mode == 1)
-//    {
-//        DHT11_GPIO_Init.Mode = GPIO_MODE_OUTPUT_PP;
-//        DHT11_GPIO_Init.Pin = DHT11_PIN;
-//        DHT11_GPIO_Init.Pull = GPIO_NOPULL;
-//        DHT11_GPIO_Init.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-//        HAL_GPIO_Init(DHT11_PORT, &DHT11_GPIO_Init);
-//    }
-	gpio_pin_config_t dht11_Config;
-
 	if(mode == 0)
 	{
-		dht11_Config.direction = kGPIO_DigitalInput;
-		dht11_Config.interruptMode = kGPIO_NoIntmode;
+		gpio_pin_config_t dht11_Config =  {kGPIO_DigitalInput,0,kGPIO_NoIntmode};
+
 		GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
 	}
-	else if(mdoe == 1)
+	else if(mode == 1)
 	{
-		dht11_Config.direction = kGPIO_DigitalOutput;
-		dht11_Config.interruptMode = kGPIO_NoIntmode;
-		dht11_Config.outputLogic = 0U;
+		gpio_pin_config_t dht11_Config =  {kGPIO_DigitalOutput,0,kGPIO_NoIntmode};
+
 		GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
 	}
 }
@@ -216,8 +193,7 @@ void DHT11_PRINTF(void) {
   } 
   else 
   {
-    printf("\nDHT11 READ ERROR\n");
-  
+		printf("\nDHT11 READ ERROR\r\n");
   }
 }
 #endif

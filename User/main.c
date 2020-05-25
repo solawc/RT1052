@@ -33,7 +33,7 @@ int main(void)
     Board_Config();
     Print_Log();
 
-    SysTick_Config(528000000/1000000);
+    SysTick_Config(CLOCK_GetFreq(kCLOCK_CpuClk)/1000000);          
     DEBUG_PRINT("Systick init succeed");
     led_init();
     DEBUG_PRINT("LED init succeed");
@@ -43,10 +43,10 @@ int main(void)
     DEBUG_PRINT("I2C init succeed");
     Adc_Init();
     DEBUG_PRINT("ADC init succeed");
-    Pit_init(0,1000);
-    DEBUG_PRINT("PIT init succeed,Set 1000ms");
-    
-
+    // Pit_init(0,1000);
+    // DEBUG_PRINT("PIT init succeed,Set 1000ms");
+    dht11_init();
+    DEBUG_PRINT("DHT11 Init");
 
     LCD_Init(LCD_INTERRUPT_DISABLE);
     LCD_Clear(CL_RED);
@@ -64,8 +64,10 @@ int main(void)
     while(1)
     {   
 		adc_collect = ADC_Get();
-        DEBUG_PRINT("adc = %d",adc_collect);
-        delay_ms(500);
+        DEBUG_PRINT("ADC GET :%d",adc_collect);
+        delay_ms(1000);
+        DHT11_PRINTF();
+        GPIO_PortToggle(LED_R_PORT, 1U << LED_R_PIN);
     }			
 }
 
