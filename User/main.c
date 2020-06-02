@@ -16,9 +16,12 @@
 #include "fsl_debug_console.h"
 #include "fsl_common.h"
 #include "main.h"
-
+#include "emwin_support.h"
+#include "GUI.h"
 void Print_Log(void);
 void Board_Config(void);
+
+global_flag_t global_flag;
 
 /***********************************************************************
 *@Function: 
@@ -43,12 +46,11 @@ int main(void)
     DEBUG_PRINT("I2C init succeed");
     Adc_Init();
     DEBUG_PRINT("ADC init succeed");
-    // Pit_init(0,1000);
-    // DEBUG_PRINT("PIT init succeed,Set 1000ms");
-    dht11_init();
-    DEBUG_PRINT("DHT11 Init");
-
-    LCD_Init(LCD_INTERRUPT_DISABLE);
+    
+    I2C_Init();
+    MPU6050_Init();
+    MPU6050_ReadID();
+    BS_LCD_Init(LCD_INTERRUPT_DISABLE);
     LCD_Clear(CL_RED);
     LCD_SetFont(&Font8x16);
     LCD_SetColors(CL_WHITE,CL_RED);
@@ -58,15 +60,18 @@ int main(void)
     LCD_DisplayStringLine(LINE(2),(uint8_t *)"KEY init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(3),(uint8_t *)"I2C init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(4),(uint8_t *)"ADC init succeed");delay_ms(500);
-
+	
     uint32_t adc_collect = 0;
-
+    
     while(1)
     {   
 		adc_collect = ADC_Get();
+        MPU6050_Gyro_Read(global_flag.gyro_data);
+        DEBUG_PRINT("%d %d %d",global_flag.gyro_data[0],global_flag.gyro_data[1],global_flag.gyro_data[2]);
         DEBUG_PRINT("ADC GET :%d",adc_collect);
+        global_flag.flag = 1-global_flag.flag;
+        DEBUG_PRINT("flag :%d",global_flag.flag);
         delay_ms(1000);
-        DHT11_PRINTF();
         GPIO_PortToggle(LED_R_PORT, 1U << LED_R_PIN);
     }			
 }

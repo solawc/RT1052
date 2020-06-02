@@ -3,8 +3,8 @@
         {
             "name": "RT1052",
             "includePath": [
-                "D:\\Keil_v5\\ARM\\ARMCC\\include/**",
-                "E:\\GitHub\\NXP\\RT1052/**"
+                "E:\\GitHub\\NXP\\RT1052/**",
+                "D:\\Keil_v5\\ARM\\ARMCC\\include/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -23,7 +23,7 @@
             "compilerPath": "",
             "cStandard": "c11",
             "cppStandard": "c++98",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "msvc-arm64"
         }
     ],
     "version": 4

@@ -42,16 +42,19 @@ void dht11_gpio_init(void)
 ****************************************************************/
 void DHT11_MODE(uint8_t mode)
 {
+	gpio_pin_config_t dht11_Config;
 	if(mode == 0)
 	{
-		gpio_pin_config_t dht11_Config =  {kGPIO_DigitalInput,0,kGPIO_NoIntmode};
-
+		dht11_Config.direction = kGPIO_DigitalInput;
+		dht11_Config.interruptMode = kGPIO_NoIntmode;
+		dht11_Config.outputLogic = 0;
 		GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
 	}
 	else if(mode == 1)
 	{
-		gpio_pin_config_t dht11_Config =  {kGPIO_DigitalOutput,0,kGPIO_NoIntmode};
-
+		dht11_Config.direction = kGPIO_DigitalOutput;
+		dht11_Config.interruptMode = kGPIO_NoIntmode;
+		dht11_Config.outputLogic = 0;
 		GPIO_PinInit(DHT11_PORT, DHT11_PIN, &dht11_Config);
 	}
 }
@@ -66,11 +69,11 @@ void DHT11_MODE(uint8_t mode)
 *@describe: —” ±
 *@author  : sola
 ****************************************************************/
-void  wait(unsigned long n)
+void wait(unsigned long n)
 {   
-        do{
-        n--;
-        }while(n);
+	do{
+	n--;
+	}while(n);
 }
 
 /****************************************************************

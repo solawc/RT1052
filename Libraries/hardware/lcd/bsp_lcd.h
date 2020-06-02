@@ -153,7 +153,7 @@ extern pixel_t s_psBufferLcd[2][LCD_PIXEL_HEIGHT][LCD_PIXEL_WIDTH];
  * º¯ÊýÉùÃ÷
  ******************************************************************************/
 void LCD_BackLight_ON(void);
-void LCD_Init(bool enableInterrupt);
+void BS_LCD_Init(bool enableInterrupt);
 void LCD_InterruptConfig(void);
 
 void LCD_SetColors(pixel_t TextColor, pixel_t BackColor); 

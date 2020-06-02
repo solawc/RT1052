@@ -278,7 +278,7 @@ void LCD_BackLight_ON(void)
 *		@arg LCD_INTERRUPT_ENABLE  Ê¹ÄÜ
 * @retval ÎÞ
 */
-void LCD_Init(bool enableInterrupt)
+void BS_LCD_Init(bool enableInterrupt)
 {
 #if LCD_RGB_888	
 	/* 

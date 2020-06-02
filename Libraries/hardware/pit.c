@@ -37,7 +37,7 @@ static void PIT_NVIC_Config(void)
 *@Date: 2019-11-17 17:32:42
 *@Drscription: 
 ***********************************************************************/
-void Pit_init(uint8_t PIT_CHn,uint32_t reload)
+void Pit_init(pit_chnl_t PIT_CHn,uint32_t reload)
 {
     pit_config_t config;
     pit_chnl_t channel;
