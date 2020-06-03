@@ -22,7 +22,7 @@ void Print_Log(void);
 void Board_Config(void);
 
 global_flag_t global_flag;
-
+global_lcd_string_t global_lcd_string;
 /***********************************************************************
 *@Function: 
 *@Input: 
@@ -37,16 +37,13 @@ int main(void)
     Print_Log();
 
     SysTick_Config(CLOCK_GetFreq(kCLOCK_CpuClk)/1000000);          
-    DEBUG_PRINT("Systick init succeed");
     led_init();
-    DEBUG_PRINT("LED init succeed");
     key_init();
-    DEBUG_PRINT("KEY init succeed");
     I2C_Init();
-    DEBUG_PRINT("I2C init succeed");
-    Adc_Init();
-    DEBUG_PRINT("ADC init succeed");
-    
+    adc_bsp_init(ADC_Channel);
+    Pit_init(kPIT_Chnl_0,100000);  //100ms
+    Pit_init(kPIT_Chnl_1,80000);  //100ms
+
     I2C_Init();
     MPU6050_Init();
     MPU6050_ReadID();
@@ -55,22 +52,16 @@ int main(void)
     LCD_SetFont(&Font8x16);
     LCD_SetColors(CL_WHITE,CL_RED);
     
+    
     LCD_DisplayStringLine(LINE(0),(uint8_t *)"Systick init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(1),(uint8_t *)"LED init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(2),(uint8_t *)"KEY init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(3),(uint8_t *)"I2C init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(4),(uint8_t *)"ADC init succeed");delay_ms(500);
 	
-    uint32_t adc_collect = 0;
-    
-    while(1)
+    while(1)  
     {   
-		adc_collect = ADC_Get();
-        MPU6050_Gyro_Read(global_flag.gyro_data);
-        DEBUG_PRINT("%d %d %d",global_flag.gyro_data[0],global_flag.gyro_data[1],global_flag.gyro_data[2]);
-        DEBUG_PRINT("ADC GET :%d",adc_collect);
-        global_flag.flag = 1-global_flag.flag;
-        DEBUG_PRINT("flag :%d",global_flag.flag);
+    
         delay_ms(1000);
         GPIO_PortToggle(LED_R_PORT, 1U << LED_R_PIN);
     }			

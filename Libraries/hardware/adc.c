@@ -19,14 +19,14 @@
                                         IOMUXC_SW_PAD_CTL_PAD_PUS(0) | \
                                         IOMUXC_SW_PAD_CTL_PAD_HYS(0))
 
-/*
-*@Date: 2020-03-18 03:01:35
-*@Function: 
-*@Input: 
+/***********************************************************************
+*@Date: 2020-06-03 09:54:32
+*@Function: adc_bsp_init
+*@Input: adc_channel_x
 *@Return: 
-*@Drscription: 
-*/
-bool Adc_Init(void)
+*@Drscription: true/false
+***********************************************************************/
+bool adc_bsp_init(uint16_t adc_channel_x)
 {
     gpio_pin_config_t Config;
     adc_config_t config;
@@ -44,7 +44,7 @@ bool Adc_Init(void)
     ADC_Init(ADCx, &config);
     ADC_SetHardwareAverageConfig(ADCx,kADC_HardwareAverageCount32);
 
-    ADC_CH_config.channelNumber = ADC_Channel;
+    ADC_CH_config.channelNumber = adc_channel_x;
     ADC_CH_config.enableInterruptOnConversionCompleted = true;
     ADC_SetChannelConfig(ADCx,ADC_GROUP,&ADC_CH_config);
 
@@ -56,7 +56,7 @@ bool Adc_Init(void)
     {
        
     }
-
+    
     return  true;
 }
 
@@ -68,10 +68,10 @@ bool Adc_Init(void)
 *@Date: 2019-11-22 20:46:10
 *@Drscription: 
 ***********************************************************************/
-uint32_t ADC_Get(void)
+uint32_t adc_get(uint16_t adc_channel_x)
 {   
     adc_channel_config_t adcChannelConfigStruct;
-    adcChannelConfigStruct.channelNumber = ADC_Channel;
+    adcChannelConfigStruct.channelNumber = adc_channel_x;
     adcChannelConfigStruct.enableInterruptOnConversionCompleted = true;
     ADC_SetChannelConfig(ADCx, ADC_GROUP, &adcChannelConfigStruct);
     

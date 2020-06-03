@@ -18,7 +18,7 @@
 #define ADC_Channel 11U
 #define ADC_GROUP   0U
 
-bool Adc_Init(void);
-uint32_t ADC_Get(void);
+bool adc_bsp_init(uint16_t adc_channel_x);
+uint32_t adc_get(uint16_t adc_channel_x);
 
 #endif /* !__adc_h */

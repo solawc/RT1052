@@ -1,7 +1,7 @@
 /***********************************************************************
 *@Date: 2020-05-22 02:22:45
 *@LastEditors: SOLA
-*@LastEditTime: 2020-06-01 16:28:25
+*@LastEditTime: 2020-06-03 10:06:27
 *@FilePath: \RT1052\User\main.h
 ***********************************************************************/
 #ifndef __main_h
@@ -18,10 +18,19 @@ typedef struct
     short gyro_data[3];
     short arce_data[3];
     uint8_t flag:1;
+    float adc_v_get;
     
 }global_flag_t;
 
+typedef struct
+{
+    char lcd_adc_str[20];
+    char lcd_mpu_g_str[20];
+    
+}global_lcd_string_t;
+
 extern global_flag_t global_flag;
+extern global_lcd_string_t global_lcd_string;
 
 #define SUCCESS							    1
 #define ERROR					    	    0

@@ -11,6 +11,7 @@
 #include "pit.h"
 #include "fsl_pit.h"
 #include "fsl_debug_console.h"
+#include "main.h"
 
 /***********************************************************************
 *@Function: 
@@ -26,7 +27,6 @@ static void PIT_NVIC_Config(void)
     NVIC_SetPriorityGrouping(0x04);
     Priority_Encode = NVIC_EncodePriority (0x04, 0x06, 0x00);//得到中断优先级编码
     NVIC_SetPriority(PIT_IRQn,Priority_Encode);
-    
 }
 
 /***********************************************************************
@@ -57,13 +57,13 @@ void Pit_init(pit_chnl_t PIT_CHn,uint32_t reload)
     
     PIT_Init(PIT, &config);
     
-    /* 设置PIT定时器通道0自动重装载值 */
+    /* 设置PIT定时器通道自动重装载值 */
     PIT_SetTimerPeriod(PIT,channel,USEC_TO_COUNT(reload, PIT_SOURCE_CLOCK));
     
-    /* 清除通道0的中断标志位 */
+    /* 清除通道的中断标志位 */
     PIT_ClearStatusFlags(PIT,channel,kPIT_TimerFlag);
     
-    /* 使能通道0的计时完成中断 */
+    /* 使能通道的计时完成中断 */
     PIT_EnableInterrupts(PIT, channel, kPIT_TimerInterruptEnable);
     
     //Set_NVIC_PriorityGroup(Group_4);
@@ -92,13 +92,26 @@ void PIT_IRQHandler(void)
     {
         /* 清除中断标志位 */
         PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag); 
-        PRINTF("进入PIT_CH0\n");
+        global_flag.adc_v_get = adc_get(ADC_Channel);
+        global_flag.adc_v_get = (global_flag.adc_v_get/(float)4096)*(float)3.3;
+        sprintf((char *)global_lcd_string.lcd_adc_str,
+                "PIT ADC Value :%.2fV",global_flag.adc_v_get);
+        LCD_DisplayStringLine(LINE(6),(uint8_t *)global_lcd_string.lcd_adc_str);
     }
     else if(PIT_GetStatusFlags(PIT, kPIT_Chnl_1))
     {
         /* 清除中断标志位 */
         PIT_ClearStatusFlags(PIT, kPIT_Chnl_1, kPIT_TimerFlag); 
-        PRINTF("进入PIT_CH1\n");
+
+        MPU6050_Gyro_Read(global_flag.gyro_data);
+        sprintf((char *)global_lcd_string.lcd_mpu_g_str,
+                "MPU Gyro:%d    %d   %d",
+                global_flag.gyro_data[0],
+                global_flag.gyro_data[1],
+                global_flag.gyro_data[2]);
+        
+        LCD_ClearLine(LINE(7));
+        LCD_DisplayStringLine(LINE(7),(uint8_t *)global_lcd_string.lcd_mpu_g_str);
     }
 }
 
