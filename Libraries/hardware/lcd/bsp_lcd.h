@@ -30,9 +30,20 @@
 
 
 /* LCD背光引脚，高电平点亮 */
-#define LCD_BL_GPIO 				      GPIO1
-#define LCD_BL_GPIO_PIN 		      (15U)
+#define LCD_BL_GPIO						GPIO1
+#define LCD_BL_GPIO_PIN					(15U)
 #define LCD_BL_IOMUXC			        IOMUXC_GPIO_AD_B0_15_GPIO1_IO15
+
+typedef enum
+{ 
+  INCH_5  = 0x00, /* 野火5寸屏 */
+  INCH_7,     /* 野火7寸屏 */
+  INCH_4_3,  /* 野火4.3寸屏 */
+  
+  LCD_TYPE_NUM /* LCD类型总数*/
+}LCD_TypeDef;
+extern LCD_TypeDef cur_lcd;
+
 
 /* LCD 分辨率 */
 #define LCD_PIXEL_WIDTH     800
@@ -46,7 +57,7 @@
 #define LCD_VSW 	1
 #define LCD_VFP 	22
 #define LCD_VBP 	23
-#define LCD_POLARITY_FLAGS	(kELCDIF_DataEnableActiveHigh |	\
+#define LCD_POLARITY_FLAGS									(kELCDIF_DataEnableActiveHigh |	\
 															kELCDIF_VsyncActiveLow | 			\
 															kELCDIF_HsyncActiveLow | 			\
 															kELCDIF_DriveDataOnRisingClkEdge)

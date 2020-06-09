@@ -16,8 +16,9 @@
 #include "fsl_debug_console.h"
 #include "fsl_common.h"
 #include "main.h"
-#include "emwin_support.h"
-#include "GUI.h"
+#include "bsp_touch_gtxx.h"
+#include "bsp_i2c_touch.h"
+
 void Print_Log(void);
 void Board_Config(void);
 
@@ -35,8 +36,9 @@ int main(void)
 {
     Board_Config();
     Print_Log();
-
-    SysTick_Config(CLOCK_GetFreq(kCLOCK_CpuClk)/1000000);          
+    
+    //SysTick_Config(CLOCK_GetFreq(kCLOCK_CpuClk) / 1000000);    
+    systick_delay_init();    
     led_init();
     key_init();
     I2C_Init();
@@ -44,7 +46,8 @@ int main(void)
     Pit_init(kPIT_Chnl_0,100000);  //100ms
     Pit_init(kPIT_Chnl_1,80000);  //100ms
 
-    I2C_Init();
+    //I2C_Init();
+	GTP_Init_Panel();
     MPU6050_Init();
     MPU6050_ReadID();
     BS_LCD_Init(LCD_INTERRUPT_DISABLE);
@@ -52,18 +55,19 @@ int main(void)
     LCD_SetFont(&Font8x16);
     LCD_SetColors(CL_WHITE,CL_RED);
     
-    
     LCD_DisplayStringLine(LINE(0),(uint8_t *)"Systick init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(1),(uint8_t *)"LED init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(2),(uint8_t *)"KEY init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(3),(uint8_t *)"I2C init succeed");delay_ms(500);
     LCD_DisplayStringLine(LINE(4),(uint8_t *)"ADC init succeed");delay_ms(500);
-	
+
     while(1)  
     {   
-    
-        delay_ms(1000);
-        GPIO_PortToggle(LED_R_PORT, 1U << LED_R_PIN);
+        delay_ms(100);
+        // GPIO_PortToggle(LED_R_PORT, 1U << LED_R_PIN);
+        led_toggle(LED_R_PIN);
+        //GTP_TouchProcess();    
+
     }			
 }
 

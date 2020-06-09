@@ -35,14 +35,19 @@ void MPU6050_WriteByte(uint8_t reg_add,uint8_t reg_dat)
 reg_add：寄存器地址
 reg_dat：需要写入的数据
 */
-
 void MPU6050_Read(uint8_t reg_add,unsigned char* Read,uint8_t num)
 {
 	// I2C1_READ(Read,MPU6050_ADDR,reg_add,num);
   I2C_ReadBuffer(MPU6050_ADDR,reg_add,Read,num);
-
 }
 
+/***********************************************************************
+*@Date: 2020-06-03 11:59:08
+*@Function: 
+*@Input: 
+*@Return: 
+*@Drscription: 
+***********************************************************************/
 uint8_t MPU6050_ReadID(void)
 {
 	//unsigned char Re = 0;
@@ -52,12 +57,12 @@ uint8_t MPU6050_ReadID(void)
 	MPU6050_Read(MPU6050_ADDR_ID,&MPU6050_DARA.MPU6050_ID,1);
 	if(MPU6050_DARA.MPU6050_ID != 0x68)
 	{
-		printf("MPU6050 dectected error!\r\n");
+		//printf("MPU6050 dectected error!\r\n");
 		return 0;
 	}
 	else
 	{
-		printf("MPU6050 ID = 0x%x\r\n",MPU6050_DARA.MPU6050_ID);
+		//printf("MPU6050 ID = 0x%x\r\n",MPU6050_DARA.MPU6050_ID);
 		return 1;
 	}
 }
@@ -112,21 +117,20 @@ short MPU6050_GET_Angle(float x,float y,float z,uint8_t dir)
   float res = 0;
   switch(dir)
   {
-  case 0:
-    temp = sqrt((x*x + y*y))/z;
-    res = atan(temp);
-    break;
-  case 1:
-    temp = sqrt((y*y + z*z))/x;
-    res = atan(temp);
-    break;
-  case 2:
-    temp = sqrt((x*x + z*z))/y;
-    res = atan(temp);
-    break;
-  
+    case 0:
+      temp = sqrt((x*x + y*y))/z;
+      res = atan(temp);
+      break;
+    case 1:
+      temp = sqrt((y*y + z*z))/x;
+      res = atan(temp);
+      break;
+    case 2:
+      temp = sqrt((x*x + z*z))/y;
+      res = atan(temp);
+      break;
   }
-  return (short)(res * (float)1800/(float)3.14);
+    return (short)(res * (float)1800/(float)3.14);
 }
 
 /***********************************************************************

@@ -9,7 +9,6 @@
 
 #include "fsl_common.h"
 
-
 #define ADC_GPIO    GPIO1
 #define ADC_PIN     22U
 #define ADC_MUX     IOMUXC_GPIO_AD_B1_06_GPIO1_IO22

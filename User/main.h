@@ -12,7 +12,6 @@
 #include "stdint.h"
 #include "mpu6050.h"
 
-
 typedef struct
 {
     short gyro_data[3];

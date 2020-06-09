@@ -14,6 +14,21 @@
 
 __IO uint32_t TimeTick = 0;
 
+
+void systick_delay_init(void)
+{
+    SysTick->LOAD = 1000;
+
+    NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL);
+
+    SysTick->VAL = 0UL;
+    
+    SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk |
+                    SysTick_CTRL_TICKINT_Msk   |
+                    SysTick_CTRL_ENABLE_Msk;
+    
+}
+
 /***********************************************************************
 *@Function: 
 *@Input: 
@@ -24,9 +39,22 @@ __IO uint32_t TimeTick = 0;
 ***********************************************************************/
 void delay_us(uint32_t tick)
 {
-    TimeTick = tick;
-    
-    while(TimeTick);
+    uint32_t ticks;
+    uint32_t told,tnow,tcnt=0;
+    uint32_t reload=SysTick->LOAD;                                                    
+    ticks=tick * (CLOCK_GetFreq(kCLOCK_CpuClk) / 1000000); 
+    told=SysTick->VAL;                                       
+    while(1)
+    {
+        tnow=SysTick->VAL;        
+        if(tnow!=told)
+        {            
+            if(tnow<told)tcnt+=told-tnow;       
+            else tcnt+=reload-tnow+told;            
+            told=tnow;
+            if(tcnt>=ticks)break;                        
+        }  
+    };
 }
 
 /***********************************************************************
@@ -56,6 +84,5 @@ void delay_ms(uint32_t tick)
 void SysTick_Handler(void)
 {
     
-    TimeTick--;
 }
 

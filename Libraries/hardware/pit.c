@@ -103,15 +103,15 @@ void PIT_IRQHandler(void)
         /* 清除中断标志位 */
         PIT_ClearStatusFlags(PIT, kPIT_Chnl_1, kPIT_TimerFlag); 
 
-        MPU6050_Gyro_Read(global_flag.gyro_data);
-        sprintf((char *)global_lcd_string.lcd_mpu_g_str,
-                "MPU Gyro:%d    %d   %d",
-                global_flag.gyro_data[0],
-                global_flag.gyro_data[1],
-                global_flag.gyro_data[2]);
+        // MPU6050_Gyro_Read(global_flag.gyro_data);
+        // sprintf((char *)global_lcd_string.lcd_mpu_g_str,
+        //         "MPU Gyro:%d    %d   %d",
+        //         global_flag.gyro_data[0],
+        //         global_flag.gyro_data[1],
+        //         global_flag.gyro_data[2]);
         
-        LCD_ClearLine(LINE(7));
-        LCD_DisplayStringLine(LINE(7),(uint8_t *)global_lcd_string.lcd_mpu_g_str);
+        // LCD_ClearLine(LINE(7));
+        // LCD_DisplayStringLine(LINE(7),(uint8_t *)global_lcd_string.lcd_mpu_g_str);
     }
 }
 
