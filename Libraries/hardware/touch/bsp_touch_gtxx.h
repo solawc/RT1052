@@ -157,7 +157,7 @@ extern const TOUCH_PARAM_TypeDef touch_param[];
 
 //***************************PART1:ON/OFF define*******************************
 
-#define GTP_DEBUG_ON         	1
+#define GTP_DEBUG_ON         	0
 #define GTP_DEBUG_ARRAY_ON    0
 #define GTP_DEBUG_FUNC_ON   	0
 // Log define
@@ -208,5 +208,5 @@ int32_t GTP_Init_Panel(void);
 int8_t GTP_Send_Command(uint8_t command);
 int	GTP_Execu( int *x,int *y);                                       
 void GTP_TouchProcess(void);
-                                       
+void GT9xx_get_on_point(void);
 #endif /* _GOODIX_GT9XX_H_ */

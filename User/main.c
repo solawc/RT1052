@@ -44,7 +44,7 @@ int main(void)
     I2C_Init();
     adc_bsp_init(ADC_Channel);
     Pit_init(kPIT_Chnl_0,100000);  //100ms
-    Pit_init(kPIT_Chnl_1,80000);  //100ms
+    Pit_init(kPIT_Chnl_1,100000);  //100ms
 
     //I2C_Init();
 	GTP_Init_Panel();
@@ -63,11 +63,9 @@ int main(void)
 
     while(1)  
     {   
-        delay_ms(100);
-        // GPIO_PortToggle(LED_R_PORT, 1U << LED_R_PIN);
+        delay_ms(500);
         led_toggle(LED_R_PIN);
-        //GTP_TouchProcess();    
-
+        GT9xx_get_on_point();  
     }			
 }
 
@@ -82,14 +80,14 @@ int main(void)
 void Print_Log(void)
 {
     DEBUG_PRINT("\r\n");
-    DEBUG_PRINT("CPU:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_CpuClk));
-    DEBUG_PRINT("AHB:             %d Hz\r\n", CLOCK_GetFreq(kCLOCK_AhbClk));
-    DEBUG_PRINT("SEMC:            %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SemcClk));
-    DEBUG_PRINT("SYSPLL:          %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllClk));
-    DEBUG_PRINT("SYSPLLPFD0:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd0Clk));
-    DEBUG_PRINT("SYSPLLPFD1:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
-    DEBUG_PRINT("SYSPLLPFD2:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
-    DEBUG_PRINT("SYSPLLPFD3:      %d Hz\r\n", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));	
+    DEBUG_PRINT("CPU:             %d Hz", CLOCK_GetFreq(kCLOCK_CpuClk));
+    DEBUG_PRINT("AHB:             %d Hz", CLOCK_GetFreq(kCLOCK_AhbClk));
+    DEBUG_PRINT("SEMC:            %d Hz", CLOCK_GetFreq(kCLOCK_SemcClk));
+    DEBUG_PRINT("SYSPLL:          %d Hz", CLOCK_GetFreq(kCLOCK_SysPllClk));
+    DEBUG_PRINT("SYSPLLPFD0:      %d Hz", CLOCK_GetFreq(kCLOCK_SysPllPfd0Clk));
+    DEBUG_PRINT("SYSPLLPFD1:      %d Hz", CLOCK_GetFreq(kCLOCK_SysPllPfd1Clk));
+    DEBUG_PRINT("SYSPLLPFD2:      %d Hz", CLOCK_GetFreq(kCLOCK_SysPllPfd2Clk));
+    DEBUG_PRINT("SYSPLLPFD3:      %d Hz", CLOCK_GetFreq(kCLOCK_SysPllPfd3Clk));	
 }
 
 /***********************************************************************

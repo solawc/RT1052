@@ -364,6 +364,8 @@ void GTP_IRQ_Enable(void)
 static int16_t pre_x[GTP_MAX_TOUCH] ={-1,-1,-1,-1,-1};
 static int16_t pre_y[GTP_MAX_TOUCH] ={-1,-1,-1,-1,-1};
 
+uint32_t x_point,y_point;
+
 static void GTP_Touch_Down(int32_t id,int32_t x,int32_t y,int32_t w)
 {
   
@@ -371,7 +373,9 @@ static void GTP_Touch_Down(int32_t id,int32_t x,int32_t y,int32_t w)
   
   /*取x、y初始值大于屏幕像素值*/
   GTP_DEBUG("ID:%d, X:%d, Y:%d, W:%d", id, x, y, w);
-  
+  GTP_DEBUG("ID:%d, X:%d, Y:%d, W:%d", id, pre_x, pre_y, w);
+  x_point = x;
+  y_point = y;
   
   /************************************/
   /*在此处添加自己的触摸点按下时处理过程即可*/
@@ -398,6 +402,8 @@ static void GTP_Touch_Up( int32_t id)
   /*******************************************/	
   /***id为轨迹编号(多点触控时有多轨迹)********/
   
+  x_point = 0;
+  y_point = 0;
   
   /*触笔释放，把pre xy 重置为负*/
   pre_x[id] = -1;
@@ -1176,6 +1182,13 @@ exit_work_func:
   return touch_num;
 }
 
+#include "main.h"
+void GT9xx_get_on_point(void)
+{
+	GTP_DEBUG_FUNC();
+	Goodix_TS_Work_Func();
+	//DEBUG_PRINT("X:%d, Y:%d",x_point, y_point);
+}
 
 
 

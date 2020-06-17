@@ -62,7 +62,7 @@
 #define m_interrupts_size              0x00000400
 
 #define m_text_start                   0x60002400
-#define m_text_size                    0x03FFDC00
+#define m_text_size                    0x01FFDC00
 
 #define m_data_start                   0x80000000
 #define m_data_size                    0x01E00000
@@ -80,7 +80,7 @@
 #if (defined(__stack_size__))
   #define Stack_Size                   __stack_size__
 #else
-  #define Stack_Size                   0x0400
+  #define Stack_Size                   0x1000
 #endif
 
 #if (defined(__heap_size__))

@@ -11,10 +11,6 @@
 #include "systick.h"
 #include "fsl_debug_console.h"
 
-
-__IO uint32_t TimeTick = 0;
-
-
 void systick_delay_init(void)
 {
     SysTick->LOAD = 1000;
@@ -26,7 +22,6 @@ void systick_delay_init(void)
     SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk |
                     SysTick_CTRL_TICKINT_Msk   |
                     SysTick_CTRL_ENABLE_Msk;
-    
 }
 
 /***********************************************************************
@@ -41,7 +36,8 @@ void delay_us(uint32_t tick)
 {
     uint32_t ticks;
     uint32_t told,tnow,tcnt=0;
-    uint32_t reload=SysTick->LOAD;                                                    
+    uint32_t reload=SysTick->LOAD;   
+                                                     
     ticks=tick * (CLOCK_GetFreq(kCLOCK_CpuClk) / 1000000); 
     told=SysTick->VAL;                                       
     while(1)
@@ -54,7 +50,7 @@ void delay_us(uint32_t tick)
             told=tnow;
             if(tcnt>=ticks)break;                        
         }  
-    };
+    }
 }
 
 /***********************************************************************

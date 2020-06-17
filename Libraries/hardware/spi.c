@@ -56,8 +56,6 @@ bool Spi_Init(void)
 
     config.ahbConfig.enableAHBPrefetch = true;
     FLEXSPI_Init(FLEXSPI, &config);
-
-
     return true;
 }
 
