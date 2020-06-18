@@ -12,7 +12,7 @@
 #include "fsl_pit.h"
 #include "fsl_debug_console.h"
 #include "main.h"
-
+#include "bsp_touch_gtxx.h"
 /***********************************************************************
 *@Function: 
 *@Input: 
@@ -91,27 +91,39 @@ void PIT_IRQHandler(void)
     if(PIT_GetStatusFlags(PIT, kPIT_Chnl_0))
     {
         /* 清除中断标志位 */
-        PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag); 
+        
         global_flag.adc_v_get = adc_get(ADC_Channel);
         global_flag.adc_v_get = (global_flag.adc_v_get/(float)4096)*(float)3.3;
         sprintf((char *)global_lcd_string.lcd_adc_str,
                 "PIT ADC Value :%.2fV",global_flag.adc_v_get);
         LCD_DisplayStringLine(LINE(6),(uint8_t *)global_lcd_string.lcd_adc_str);
+        PIT_ClearStatusFlags(PIT, kPIT_Chnl_0, kPIT_TimerFlag); 
     }
     else if(PIT_GetStatusFlags(PIT, kPIT_Chnl_1))
     {
         /* 清除中断标志位 */
-        PIT_ClearStatusFlags(PIT, kPIT_Chnl_1, kPIT_TimerFlag); 
-
-        // MPU6050_Gyro_Read(global_flag.gyro_data);
-        // sprintf((char *)global_lcd_string.lcd_mpu_g_str,
-        //         "MPU Gyro:%d    %d   %d",
-        //         global_flag.gyro_data[0],
-        //         global_flag.gyro_data[1],
-        //         global_flag.gyro_data[2]);
         
-        // LCD_ClearLine(LINE(7));
-        // LCD_DisplayStringLine(LINE(7),(uint8_t *)global_lcd_string.lcd_mpu_g_str);
+
+        MPU6050_Gyro_Read(global_flag.gyro_data);
+        sprintf((char *)global_lcd_string.lcd_mpu_g_str,
+                "MPU Gyro:%d    %d   %d",
+                global_flag.gyro_data[0],
+                global_flag.gyro_data[1],
+                global_flag.gyro_data[2]);
+        
+        LCD_ClearLine(LINE(7));
+        LCD_DisplayStringLine(LINE(7),(uint8_t *)global_lcd_string.lcd_mpu_g_str);
+        PIT_ClearStatusFlags(PIT, kPIT_Chnl_1, kPIT_TimerFlag); 
+    }
+    else if(PIT_GetStatusFlags(PIT, kPIT_Chnl_2))
+    {
+        DEBUG_PRINT("PIT CH2");
+        GT9xx_get_on_point();  
+        if(lcd_key_scanf() == true)
+        {
+            led_toggle(LED_G_PIN);
+        }
+        PIT_ClearStatusFlags(PIT, kPIT_Chnl_2, kPIT_TimerFlag); 
     }
 }
 

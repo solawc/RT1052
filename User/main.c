@@ -44,8 +44,8 @@ int main(void)
     I2C_Init();
     adc_bsp_init(ADC_Channel);
     Pit_init(kPIT_Chnl_0,100000);  //100ms
-    Pit_init(kPIT_Chnl_1,100000);  //100ms
-
+    Pit_init(kPIT_Chnl_1,800000);  //100ms
+    Pit_init(kPIT_Chnl_2,500000);  //100ms
     //I2C_Init();
 	GTP_Init_Panel();
     MPU6050_Init();
@@ -54,18 +54,13 @@ int main(void)
     LCD_Clear(CL_RED);
     LCD_SetFont(&Font8x16);
     LCD_SetColors(CL_WHITE,CL_RED);
-    
-    LCD_DisplayStringLine(LINE(0),(uint8_t *)"Systick init succeed");delay_ms(500);
-    LCD_DisplayStringLine(LINE(1),(uint8_t *)"LED init succeed");delay_ms(500);
-    LCD_DisplayStringLine(LINE(2),(uint8_t *)"KEY init succeed");delay_ms(500);
-    LCD_DisplayStringLine(LINE(3),(uint8_t *)"I2C init succeed");delay_ms(500);
-    LCD_DisplayStringLine(LINE(4),(uint8_t *)"ADC init succeed");delay_ms(500);
-
+    lcd_key_creat();
     while(1)  
     {   
         delay_ms(500);
         led_toggle(LED_R_PIN);
-        GT9xx_get_on_point();  
+        
+        
     }			
 }
 

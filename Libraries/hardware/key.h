@@ -46,9 +46,20 @@ typedef struct
 }KEY_StrInit;
 
 
+typedef struct 
+{
+    uint32_t key_start_x_point;
+    uint32_t key_start_y_point;
+    uint32_t key_weigth;
+    uint32_t key_high;
+
+}lcd_key_t;
 
 
 
+
+bool lcd_key_creat(void);
+bool lcd_key_scanf(void);
 void key_init(void);
 uint8_t key_scanf(void);
 #endif

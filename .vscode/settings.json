@@ -25,6 +25,7 @@
     "[c]": {
         "editor.quickSuggestions": true
     },
-    "terminal.integrated.automationShell.windows": "C:\\Program Files\\Git\binbash.exe"
+    "terminal.integrated.automationShell.windows": "C:\\Program Files\\Git\binbash.exe",
+    "files.encoding": "gb2312"
 }
 

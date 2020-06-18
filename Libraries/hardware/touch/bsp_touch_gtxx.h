@@ -27,6 +27,8 @@
 /*设定使用的电容屏IIC设备地址*/
 #define GTP_ADDRESS            0xBA
 
+extern uint32_t x_point,y_point;
+
 /*flags的可取值，注释掉的在本工程没有用到*/
 //#define I2C_M_TEN		0x0010	/* 表示这是个10位地址 */
 //#define I2C_M_NOSTART		0x4000	/* if I2C_FUNC_PROTOCOL_MANGLING */

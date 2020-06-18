@@ -9,8 +9,9 @@
 *                                Inc
 ***********************************************************************/
 #include "key.h"
+#include "./touch/bsp_touch_gtxx.h"
 
-
+#include "main.h"
 
 #define KEY_PAD_CONFIG_DATA            (IOMUXC_SW_PAD_CTL_PAD_SRE(0) | \
                                         IOMUXC_SW_PAD_CTL_PAD_DSE(0) | \
@@ -20,15 +21,15 @@
                                         IOMUXC_SW_PAD_CTL_PAD_PUE(1) | \
                                         IOMUXC_SW_PAD_CTL_PAD_PUS(3) | \
                                         IOMUXC_SW_PAD_CTL_PAD_HYS(1))
-/*    PAD ÅäÖÃËµÃ÷
-*1¡¢SER°ÚÂÊ¹Ø±Õ
-*2¡¢DSEÇ¿Çý¶¯¹Ø±Õ
-*3¡¢SPEEDËÙ¶ÈÑ¡Ôñ £º100MHz
-*4¡¢ODE¿ªÂ©²»Ê¹ÄÜ
-*6¡¢PKEÉÏÏÂÀ­Ê¹ÄÜ
-*7¡¢PUEÉÏÏÂÀ­Ñ¡Ôñ£¬Ñ¡ÔñÉÏÀ­
-*8¡¢PUSÉÏÏÂÀ­µç×èÑ¡Ôñ£¬Ñ¡Ôñ22K
-*9¡¢ÖÍ»Ø»º³åÆ÷Ê¹ÄÜ
+/*    PAD ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½
+*1ï¿½ï¿½SERï¿½ï¿½ï¿½Ê¹Ø±ï¿½
+*2ï¿½ï¿½DSEÇ¿ï¿½ï¿½ï¿½ï¿½ï¿½Ø±ï¿½
+*3ï¿½ï¿½SPEEDï¿½Ù¶ï¿½Ñ¡ï¿½ï¿½ ï¿½ï¿½100MHz
+*4ï¿½ï¿½ODEï¿½ï¿½Â©ï¿½ï¿½Ê¹ï¿½ï¿½
+*6ï¿½ï¿½PKEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
+*7ï¿½ï¿½PUEï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+*8ï¿½ï¿½PUSï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Ñ¡ï¿½ï¿½22K
+*9ï¿½ï¿½ï¿½Í»Ø»ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½
 */                                        
 
 /*-------------------------------------------------------------------------------*/
@@ -44,11 +45,11 @@
 void key_it_config(void)
 {
     
-    CLOCK_EnableClock(kCLOCK_IomuxcSnvs);     //´ò¿ªÊ±ÖÓ
+    CLOCK_EnableClock(kCLOCK_IomuxcSnvs);     //ï¿½ï¿½Ê±ï¿½ï¿½
     
-    EnableIRQ(GPIO5_Combined_0_15_IRQn);      //Ñ¡ÔñÖÐ¶ÏÔ´²¢Ê¹ÄÜ
+    EnableIRQ(GPIO5_Combined_0_15_IRQn);      //Ñ¡ï¿½ï¿½ï¿½Ð¶ï¿½Ô´ï¿½ï¿½Ê¹ï¿½ï¿½
     
-    GPIO_PortEnableInterrupts(K1_PORT,1U << K1_PIN);    //Ê¹ÄÜ¶Ë¿ÚÖÐ¶Ï
+    GPIO_PortEnableInterrupts(K1_PORT,1U << K1_PIN);    //Ê¹ï¿½Ü¶Ë¿ï¿½ï¿½Ð¶ï¿½
 }
 
 /***********************************************************************
@@ -63,20 +64,20 @@ void key_init(void)
 {
     gpio_pin_config_t KEY_Config;
     
-    /*ÉèÖÃIO¸´ÓÃ*/
+    /*ï¿½ï¿½ï¿½ï¿½IOï¿½ï¿½ï¿½ï¿½*/
     IOMUXC_SetPinMux(K1_MUX,0u);
     IOMUXC_SetPinMux(K2_MUX,0u);
-    /*ÅäÖÃGOIO PAD*/
+    /*ï¿½ï¿½ï¿½ï¿½GOIO PAD*/
     IOMUXC_SetPinConfig(K1_MUX,KEY_PAD_CONFIG_DATA);
     IOMUXC_SetPinConfig(K2_MUX,KEY_PAD_CONFIG_DATA);
-    /*ÅäÖÃGPIO Ä£Ê½*/
-    KEY_Config.direction = kGPIO_DigitalInput;      //ÅäÖÃÎªÊäÈëÄ£Ê½
-    KEY_Config.outputLogic = 1u;                    //´ËÅäÖÃÔÚÊäÈëÊ±ÎÞÐ§ 
-    KEY_Config.interruptMode = kGPIO_NoIntmode;     //²»Ê¹ÓÃÖÐ¶Ï 
-    //KEY_Config.interruptMode = kGPIO_IntLowLevel;   //µÍµçÆ½´¥·¢ÖÐ¶Ï
+    /*ï¿½ï¿½ï¿½ï¿½GPIO Ä£Ê½*/
+    KEY_Config.direction = kGPIO_DigitalInput;      //ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ä£Ê½
+    KEY_Config.outputLogic = 1u;                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ð§ 
+    KEY_Config.interruptMode = kGPIO_NoIntmode;     //ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½Ð¶ï¿½ 
+    //KEY_Config.interruptMode = kGPIO_IntLowLevel;   //ï¿½Íµï¿½Æ½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
     GPIO_PinInit(K1_PORT,K1_PIN,&KEY_Config);
     GPIO_PinInit(K2_PORT,K2_PIN,&KEY_Config);
-    //key_it_config();                                //ÖÐ¶ÏÅäÖÃ
+    //key_it_config();                                //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½
 } 
 
 /***********************************************************************
@@ -104,6 +105,35 @@ uint8_t key_scanf(void)
     return 0;
 }
 
+lcd_key_t lcd_key1;
+
+bool lcd_key_creat(void)
+{
+    lcd_key1.key_high = 50;
+    lcd_key1.key_start_x_point = 100; 
+    lcd_key1.key_start_y_point = 200;
+    lcd_key1.key_weigth = 80;
+    
+    LCD_DrawRect(lcd_key1.key_start_x_point, 
+                 lcd_key1.key_start_y_point,
+                 lcd_key1.key_weigth,
+                 lcd_key1.key_high);
+    
+    return true;
+}
+
+bool lcd_key_scanf(void)
+{
+    if(x_point>100 && x_point <150)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 /***********************************************************************
 *@Function: 
 *@Input: 
@@ -115,7 +145,7 @@ uint8_t key_scanf(void)
 /*
 void GPIO5_Combined_0_15_IRQHandler(void)
 {
-    GPIO_PortClearInterruptFlags(K1_PORT,1U << K1_PIN); //Çå³ýÖÐ¶Ï±êÖ¾Î»
+    GPIO_PortClearInterruptFlags(K1_PORT,1U << K1_PIN); //ï¿½ï¿½ï¿½ï¿½Ð¶Ï±ï¿½Ö¾Î?
     
     led_toggle(LED_B_PIN);
 

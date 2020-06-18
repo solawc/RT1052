@@ -10,7 +10,7 @@
 #define LCD_RGB_888 				0
 
 /* 此宏为真时，使用24根数据线驱动屏幕，
-	 为假时，使用16根数据线，
+	 为假时，使用16根数据线，1
 	 本开发板网络接口使用了部分LCD数据信号线，
 	 所以本硬件设计仅支持LCD使用16根数据线，
 	 若像素格式配置为RGB888格式24位，数据线为16位，
@@ -61,8 +61,6 @@ extern LCD_TypeDef cur_lcd;
 															kELCDIF_VsyncActiveLow | 			\
 															kELCDIF_HsyncActiveLow | 			\
 															kELCDIF_DriveDataOnRisingClkEdge)
-
-
 
 /* 缓冲区对齐配置, 为了提高性能, LCDIF缓冲区要64B对齐 */
 #define FRAME_BUFFER_ALIGN    		64
