@@ -18,7 +18,8 @@
 #include "main.h"
 #include "bsp_touch_gtxx.h"
 #include "bsp_i2c_touch.h"
-
+#include "dht11.h"
+#include "uart.h"
 void Print_Log(void);
 void Board_Config(void);
 
@@ -42,24 +43,36 @@ int main(void)
     led_init();
     key_init();
     I2C_Init();
-    adc_bsp_init(ADC_Channel);
-    Pit_init(kPIT_Chnl_0,100000);  //100ms
-    Pit_init(kPIT_Chnl_1,800000);  //100ms
-    Pit_init(kPIT_Chnl_2,500000);  //100ms
-    //I2C_Init();
-	GTP_Init_Panel();
-    MPU6050_Init();
-    MPU6050_ReadID();
+//    adc_bsp_init(ADC_Channel);
+//    Pit_init(kPIT_Chnl_0,100000);  //100ms
+//    Pit_init(kPIT_Chnl_1,800000);  //100ms
+//    Pit_init(kPIT_Chnl_2,500000);  //100ms
+//    I2C_Init();
+//    dht11_init();
+//	GTP_Init_Panel();
+//    MPU6050_Init();
+//    MPU6050_ReadID();
     BS_LCD_Init(LCD_INTERRUPT_DISABLE);
-    LCD_Clear(CL_RED);
+    LCD_Clear(CL_BLUE);
     LCD_SetFont(&Font8x16);
-    LCD_SetColors(CL_WHITE,CL_RED);
+    //LCD_SetColors(CL_WHITE,CL_RED);
+    LCD_SetBackColor(CL_BLUE);
+    LCD_SetTextColor(CL_WHITE);
+    PutPixel(70,200);
     lcd_key_creat();
+
     while(1)  
     {   
+        LCD_Clear(CL_BLUE);
         delay_ms(500);
-        led_toggle(LED_R_PIN);
-        
+        LCD_Clear(CL_WHITE);
+        delay_ms(500);
+        LCD_Clear(CL_GREEN);
+        delay_ms(500);
+        LCD_Clear(CL_YELLOW);
+        delay_ms(500);
+        LCD_Clear(CL_MAGENTA);
+        delay_ms(500);
         
     }			
 }

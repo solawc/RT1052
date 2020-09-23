@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-29 19:23:36
+ * @LastEditTime: 2020-08-13 16:57:49
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \RT1052\Libraries\hardware\lcd\bsp_sdram.h
+ */
 #ifndef __BSP_SDRAM_H
 #define	__BSP_SDRAM_H
 
@@ -10,9 +18,5 @@
  * º¯ÊýÉùÃ÷
  ******************************************************************************/
 int32_t SDRAM_Init(void);
-
-void SEMC_SDRAMReadWrite32Bit(void);
-void SEMC_SDRAMReadWrite16Bit(void);
-void SEMC_SDRAMReadWrite8Bit(void);
 
 #endif /* __BSP_SDRAM_H */

@@ -11,6 +11,7 @@
 #include "fsl_lpuart.h"
 #include "stdio.h"
 
-
-
+void lpuart_send_byte(LPUART_Type *base, uint8_t data);
+void send_string(uint8_t *data);
+void send_conputer(uint8_t *data);
 #endif

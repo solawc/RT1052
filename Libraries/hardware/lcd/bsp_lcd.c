@@ -23,7 +23,7 @@
 	
 #include "pad_config.h"  
 #include "bsp_lcd.h" 
-#
+
 
 
 /*******************************************************************************
@@ -627,6 +627,19 @@ void PutPixel(uint16_t Xpos, uint16_t Ypos)
   {
 		*(pixel_t *)(CurrentFrameBuffer + LCD_BPP*(Xpos + (LCD_PIXEL_WIDTH*Ypos))) = CurrentTextColor;
 	}
+}
+
+/**
+  * @brief 在指定的位置绘制一个像素点
+  * @param  Xpos: x坐标
+  * @param  Ypos: y坐标
+  * @param  Color: 颜色
+  * @retval None
+  */
+void DrawPoint(uint16_t Xpos, uint16_t Ypos,pixel_t Color)
+{
+    LCD_SetTextColor(Color);
+    PutPixel(Xpos,Ypos);
 }
 
 /**

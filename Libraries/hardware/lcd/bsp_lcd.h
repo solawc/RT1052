@@ -9,13 +9,13 @@
 */
 #define LCD_RGB_888 				0
 
-/* 此宏为真时，使用24根数据线驱动屏幕，
-	 为假时，使用16根数据线，1
-	 本开发板网络接口使用了部分LCD数据信号线，
-	 所以本硬件设计仅支持LCD使用16根数据线，
-	 若像素格式配置为RGB888格式24位，数据线为16位，
-	 eLCDIF输出时会自动转换，此时显存像素点使用24位浪费空间，
-   所以推荐使用RGB565格式
+/*  此宏为真时，使用24根数据线驱动屏幕，
+	为假时，使用16根数据线，1
+	本开发板网络接口使用了部分LCD数据信号线，
+	所以本硬件设计仅支持LCD使用16根数据线，
+	若像素格式配置为RGB888格式24位，数据线为16位，
+	eLCDIF输出时会自动转换，此时显存像素点使用24位浪费空间，
+	所以推荐使用RGB565格式
  */
 #define LCD_BUS_24_BIT			0
 
@@ -161,10 +161,12 @@ extern pixel_t s_psBufferLcd[2][LCD_PIXEL_HEIGHT][LCD_PIXEL_WIDTH];
 /*******************************************************************************
  * 函数声明
  ******************************************************************************/
-void LCD_BackLight_ON(void);
-void BS_LCD_Init(bool enableInterrupt);
-void LCD_InterruptConfig(void);
 
+void BS_LCD_Init(bool enableInterrupt);
+void PutPixel(uint16_t Xpos, uint16_t Ypos);
+void DrawPoint(uint16_t Xpos, uint16_t Ypos,pixel_t Color);   //打点函数
+void LCD_BackLight_ON(void);
+void LCD_InterruptConfig(void);
 void LCD_SetColors(pixel_t TextColor, pixel_t BackColor); 
 void LCD_GetColors(pixel_t *TextColor, pixel_t *BackColor);
 void LCD_SetTextColor(pixel_t Color);
@@ -176,11 +178,8 @@ void LCD_DispString(uint16_t Xpos, uint16_t Ypos, const uint8_t * pStr );
 void LCD_DisplayStringLine(uint16_t Line, uint8_t *ptr);
 void LCD_ClearLine(uint16_t Line);
 uint32_t LCD_SetCursor(uint16_t Xpos, uint16_t Ypos);
-
-
 void LCD_SetFrameBuffer(uint8_t index);
 void LCD_SetDisplayBuffer(uint8_t index);
-void PutPixel(uint16_t Xpos, uint16_t Ypos);
 void LCD_Clear(uint32_t Color);
 void LCD_DrawLine(uint16_t Xpos, uint16_t Ypos, uint16_t Length, bool Direction);
 void LCD_DrawRect(uint16_t Xpos, uint16_t Ypos, uint16_t Width, uint16_t Height);

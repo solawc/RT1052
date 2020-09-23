@@ -3,7 +3,7 @@
         {
             "name": "RT1052",
             "includePath": [
-                "E:\\GitHub\\NXP\\RT1052/**",
+                "E:\\Github\\RT1052/**",
                 "D:\\Keil_v5\\ARM\\ARMCC\\include/**"
             ],
             "defines": [

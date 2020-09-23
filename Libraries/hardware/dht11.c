@@ -133,7 +133,7 @@ uint8_t Read_DHT11(DHT11_Data_TypeDef *DHT11_Data) {
 	
 	__DHT11_OUT_L();            //À­µÍ
 	
-	__DHT11_DELAY_MS(18);       //18ms
+	__DHT11_DELAY_MS(20);       //18ms
 
 	__DHT11_OUT_H();            //À­¸ß
     

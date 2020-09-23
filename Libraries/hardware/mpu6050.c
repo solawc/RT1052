@@ -10,13 +10,13 @@ void MPU6050_DELAY()
 
 void MPU6050_Init(void)
 {
-  MPU6050_DELAY();
+    MPU6050_DELAY();
 	MPU6050_WriteByte(MPU6050_RA_PWR_MGMT_1,0X00);  //解除休眠模式
 	MPU6050_WriteByte(MPU6050_RA_SMPLRT_DIV,0x07);	//配置陀螺仪采样率
 	MPU6050_WriteByte(MPU6050_RA_CONFIG,	0x06);
 	MPU6050_WriteByte(MPU6050_RA_ACCEL_CONFIG,0x018);//配置工作在16G模式下
 	MPU6050_WriteByte(MPU6050_RA_GYRO_CONFIG,0x18);	//陀螺仪自检测量范围
-  MPU6050_DELAY();
+    MPU6050_DELAY();
 }
 
 /*
@@ -96,7 +96,7 @@ void MPU6050_ACC_Read(short *accData)
 ***********************************************************************/
 void MPU6050_Gyro_Read(short *gyroData)
 {
-	  uint8_t buf[6];
+	 uint8_t buf[6];
     MPU6050_Read(MPU6050_GYRO_OUT,buf,6);
     gyroData[0] = (buf[0] << 8) | buf[1];
     gyroData[1] = (buf[2] << 8) | buf[3];
